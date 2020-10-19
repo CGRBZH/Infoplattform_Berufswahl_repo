@@ -1,0 +1,18 @@
+Datenquelle Berufswahl:
+
+Schul- und Berufswahl: Gewählte Berufslehren: https://pub.bista.zh.ch/de/zahlen-und-fakten/sbw/schul-und-berufswahl-gewaehlte-berufslehren/gewaehlte-berufslehren-nach-haeufigkeit/
+
+
+Datenquellen Studienwahl:
+
+Studierende an den universitären Hochschulen: https://www.bfs.admin.ch/bfs/de/home/statistiken/bildung-wissenschaft/personen-ausbildung/tertiaerstufe-hochschulen.assetdetail.12347091.html
+
+Studierende an den Fachhochschulen (ohne PH): https://www.bfs.admin.ch/bfs/de/home/statistiken/bildung-wissenschaft/personen-ausbildung/tertiaerstufe-hochschulen.assetdetail.12347091.html
+
+Studierende an den pädagogischen Hochschulen (ohne FH): https://www.bfs.admin.ch/bfs/de/home/statistiken/bildung-wissenschaft/personen-ausbildung/tertiaerstufe-hochschulen.assetdetail.12347133.html
+
+
+Datenquelle Profilwahl:
+
+Lernende an Mittelschulen nach Profilwahl: https://pub.bista.zh.ch/de/zahlen-und-fakten/sdl/lernende-an-mittelschulen/uebersicht/#2488
+Bildungsabschlüsse auf Sekundarstufe II: https://pub.bista.zh.ch/de/zahlen-und-fakten/sba/bildungsabschluesse-auf-sekundarstufe-ii/auswertung-abschlusstypen-absolute-zahlen/#2488,2485,2486

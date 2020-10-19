@@ -1,0 +1,144 @@
+---
+title: "Lernende_Mittelschulen_Profilwahl"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(readr)
+library(foreach)
+library(tidyverse)
+library(plyr)
+library(ggplot2)
+
+```
+
+# Profilwahl
+
+
+Lernende an Mittelschulen | Anteil Schülerinnen und Schüler der jeweiligen Kategorie in Prozentangaben | 2010-2019
+
+Wir unterscheiden zwischen:
+    Gymnasien
+    Diplommittelschulen (bis 2006)
+    Fachmittelschulen (ab 2007)
+    Handelsmittelschulen
+    Informatikmittelschulen
+    Passerelle (Übergang Berufsmatur oder Fachmatur in eine Hochschule)
+    Andere (Schulen mit ausländischem Programm; Steinerschulen nachobligatorisch)
+    
+Datenquelle: https://pub.bista.zh.ch/de/zahlen-und-fakten/sdl/lernende-an-mittelschulen/uebersicht/#2488
+
+```{r}
+
+# There are some csv files in the "Daten" dir.
+# First get the paths of those.
+
+datapath_p <- fs::dir_ls("./Daten/Profilwahl", regexp = ("csv"))
+
+# Second extract the year from the file name.
+jahr <- sub('.*_(\\d+).*\\.csv', '\\1', datapath_p)
+
+# Third read the data  
+
+profilwahl <- foreach(i=datapath_p) %do% read_csv(i) %>% 
+  mapply(`[<-`, ., 'Jahr', value = jahr, SIMPLIFY = FALSE) %>% 
+  bind_rows()
+
+# Data longer
+
+profilwahl_long <- profilwahl %>%
+  filter(Typ != "Diplommittelschule") %>%
+  select(Jahr, "Profil" = Typ, "Frauen" = Weiblich, "Männer" = Männlich)
+
+write.csv(profilwahl_long, "Profilwahl.csv", row.names = FALSE, fileEncoding = "UTF-8")
+```
+
+# Berufslehre
+
+Schul- und Berufswahl: Gewählte Berufslehren nach Geschlecht | Kanton Zürich, Anteil,  2010-2020
+
+Datenquelle: https://pub.bista.zh.ch/de/zahlen-und-fakten/sbw/schul-und-berufswahl-gewaehlte-berufslehren/gewaehlte-berufslehren-nach-haeufigkeit/
+
+
+```{r message=FALSE}
+
+# There are some csv files in the "Daten" dir.
+# First get the paths of those.
+
+datapath_b <- fs::dir_ls("./Daten/Berufslehre", regexp = ("csv"))
+
+# Second extract the year from the file name.
+jahr_b <- sub('.*_(\\d+).*\\.csv', '\\1', datapath_b)
+
+# Third extract totals by gender
+# totals <- berufslehre_cleaned %>% 
+#   filter(`Gewählter Beruf` == "Total") %>% 
+#   tidyr::pivot_longer(cols = c(Frauen, Männer), names_to = "Geschlecht", values_to = "Total_Geschlecht") %>% 
+#   select(Jahr, Geschlecht, Total_Geschlecht)
+
+# Third read the data  
+
+berufslehre <- foreach(i=datapath_b) %do% read_csv(i) %>% 
+  mapply(`[<-`, ., 'Jahr', value = jahr_b, SIMPLIFY = FALSE) %>%
+  ldply (., data.frame)
+
+```
+
+```{r}
+
+## Cleaning unneccassary strings
+berufslehre$Gewählter.Beruf <- stringr::str_remove(berufslehre$Gewählter.Beruf, " Erweiterte Grundbildung")
+berufslehre$Gewählter.Beruf <- stringr::str_remove(berufslehre$Gewählter.Beruf, " Erw. Grundbildung")
+berufslehre$Gewählter.Beruf <- stringr::str_remove(berufslehre$Gewählter.Beruf, " Basis-Grundbildung")
+berufslehre$Gewählter.Beruf <- stringr::str_remove(berufslehre$Gewählter.Beruf, " Basisbildung")
+berufslehre$Gewählter.Beruf <- gsub("\\s*\\([^\\)]+\\)","",as.character(berufslehre$Gewählter.Beruf))
+berufslehre$Gewählter.Beruf <- stringr::str_remove(berufslehre$Gewählter.Beruf, " EFZ")
+berufslehre$Gewählter.Beruf <- stringr::str_remove(berufslehre$Gewählter.Beruf, " EBA")
+
+# Unify labels
+berufslehre_cleaned <- berufslehre %>%
+  mutate(Beruf = case_when(
+    Gewählter.Beruf %in% c("Bäcker/in-Konditor/in", "Konditor/in-Confiseur/in", "Bäcker-Konditor-Confiseur/-in") ~ "Bäcker/in-Konditor/in-Confiseur/in",
+    Gewählter.Beruf %in% c("Detailhandelsfachmann/-frau  Bewirtschaftung" , "Detailhandelsfachmann/-frau Beratung") ~ "Detailhandelsfachmann/-frau",
+    Gewählter.Beruf == "Gärtner/in" ~ "Gärtner/-in",
+    Gewählter.Beruf %in% c("Gebäudetechnikplaner/in Heizung", "Gebäudetechnikplaner/in Lüftung", "Gebäudetechnikplaner/in Sanitär") ~ "Gebäudetechnikplaner/in",
+    Gewählter.Beruf == "Kaufmann/Kauffrau" ~ "Kaufmann/-frau",
+    Gewählter.Beruf == "Müller/in" ~ "Müller/-in",
+    Gewählter.Beruf == "Musikinstrumentenbauer/inEFZ" ~ "Musikinstrumentenbauer/in",
+    Gewählter.Beruf == "Drucktechnologe/-gin" ~ "Drucktechnologe/-login",
+    Gewählter.Beruf == "Fahrradmechaniker/in" ~ "Fahrradmechaniker/-in",
+    Gewählter.Beruf == "Ind.u.Unterlagsbodenbauerpraktiker/in" ~ "Industrie- und Unterlagsbodenbauer/in",
+    Gewählter.Beruf == "Informatiker/in " ~ "Informatiker/in",
+    Gewählter.Beruf == "Kältesystem-Monteur/in" ~ "Kältesystem-Monteur/-in",
+    Gewählter.Beruf == "Medizinische Praxisassistent/in" ~ "Medizinische/r Praxisassistent/in",
+    Gewählter.Beruf == "Polygraf/in " ~ "Polygraf/in",
+    Gewählter.Beruf == "Printmedienpraktiker/in" ~ "Printmedienpraktiker/-in",
+     TRUE ~ Gewählter.Beruf)) %>%
+  tidyr::pivot_longer(cols = c(Frauen, Männer), names_to = "Geschlecht", values_to = "Anzahl") %>%
+  select(-c(Gewählter.Beruf, Rang, `Anteil.in..`))
+
+write.csv(berufslehre_cleaned, "Berufslehre.csv", row.names = FALSE, fileEncoding = "UTF-8")
+
+
+# Data longer
+berufswahl_agg <- Berufslehre %>%
+  group_by(Jahr, Gewählter.Beruf) %>%
+  mutate(Total = sum(Total),
+            Frauen = sum(Frauen),
+            Männer = sum(Männer)) %>%
+  ungroup() %>%
+  tidyr::pivot_longer(cols = c(Frauen, Männer), names_to = "Geschlecht", values_to = "Anzahl")
+
+# berufslehre <- plyr::ddply(berufslehre_agg, .(Jahr, Geschlecht), transform, percent = round(Anzahl/sum(Anzahl) * 100))
+  
+# mutate(Total_Geschlecht = case_when(Geschlecht == "Frauen" ~ total_frauen,
+#                                       TRUE ~ total_männer),
+#       Anteil = round((Anzahl/Total_Geschlecht)*100, 1))
+
+
+# write.csv(berufslehre_long, "Berufslehre.csv", row.names = FALSE, fileEncoding = "UTF-8")
+```
+
+

@@ -1,0 +1,53 @@
+---
+title: "Studienwahl_Datapreparation"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(readr)
+library(foreach)
+library(tidyverse)
+library(ggplot2)
+library(tm)
+
+```
+
+# Studienwahl nach Schultyp
+
+- Universitäte Hochschulen
+- Fachhochschulen
+- Pädagogische Hochschule
+
+Daten via BFS
+
+# Studienwahl universitäre Hochschulen
+
+```{r}
+
+hochschulen <- read_delim("L:/STAT/08_DS/01_Projekte/Fachstelle für Gleichstellung/2020/Infoplattform_Berufswahl/Daten/Studienwahl/BFS_Studierende_Hochschulen.csv", 
+    ";", trim_ws = TRUE, skip = 1)
+
+# Transform list to dataframe
+hochschulen_df <- data.frame(matrix(unlist(hochschulen), nrow=440, byrow=F),stringsAsFactors=FALSE) %>%
+  rename(., c(X1 = "Jahr", X2 = "Fachbereich", X3 = "Geschlecht", X4 = "UZH", X5 = "ETHZ")) %>%
+  mutate(Jahr = as.character(Jahr),
+         Fachbereich = as.character(Fachbereich),
+         Geschlecht = as.character(Geschlecht),
+         UZH = as.numeric(UZH),
+         ETHZ = as.numeric(ETHZ))
+
+# Cleaning Fachbereich labels
+hochschulen_df$Fachbereich <- stringr::str_remove(hochschulen_df$Fachbereich, " �bergreifend/�brige")
+hochschulen_df$Fachbereich <- gsub("\\d*\\.\\d*", "", hochschulen_df$Fachbereich)
+hochschulen_df$Fachbereich <- gsub("\\d*", "", hochschulen_df$Fachbereich)
+hochschulen_df$Fachbereich <- str_replace(hochschulen_df$Fachbereich, "�", "ä")
+
+hochschulen_calc <- hochschulen_df %>%
+  mutate(Total_HS = rowSums(.[4:5]))
+```
+
+### Split & Re-assamble
+https://stat.ethz.ch/R-manual/R-devel/library/base/html/split.html
+https://stackoverflow.com/questions/30359427/calculate-the-mean-of-every-13-rows-in-data-frame

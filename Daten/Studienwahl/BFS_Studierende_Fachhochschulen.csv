@@ -1,0 +1,289 @@
+"Studierende an den Fachhochschulen (ohne PH) nach Jahr, Fachbereich, Studienstufe, Geschlecht und Hochschule"
+
+"Jahr";"Fachbereich";"Geschlecht";"ZFH"
+"2019/20";"Architektur, Bau- und Planungswesen";"Mann";319
+"2019/20";"Architektur, Bau- und Planungswesen";"Frau";119
+"2019/20";"Technik und IT";"Mann";2205
+"2019/20";"Technik und IT";"Frau";250
+"2019/20";"Chemie und Life Sciences";"Mann";717
+"2019/20";"Chemie und Life Sciences";"Frau";697
+"2019/20";"Land- und Forstwirtschaft";"Mann";0
+"2019/20";"Land- und Forstwirtschaft";"Frau";0
+"2019/20";"Wirtschaft und Dienstleistungen";"Mann";4539
+"2019/20";"Wirtschaft und Dienstleistungen";"Frau";3534
+"2019/20";"Design";"Mann";196
+"2019/20";"Design";"Frau";248
+"2019/20";"Sport";"Mann";0
+"2019/20";"Sport";"Frau";0
+"2019/20";"Musik, Theater und andere Künste";"Mann";829
+"2019/20";"Musik, Theater und andere Künste";"Frau";1087
+"2019/20";"Angewandte Linguistik";"Mann";84
+"2019/20";"Angewandte Linguistik";"Frau";391
+"2019/20";"Soziale Arbeit";"Mann";237
+"2019/20";"Soziale Arbeit";"Frau";665
+"2019/20";"Angewandte Psychologie";"Mann";265
+"2019/20";"Angewandte Psychologie";"Frau";940
+"2019/20";"Gesundheit";"Mann";225
+"2019/20";"Gesundheit";"Frau";1667
+"2019/20";"Nicht zuteilbar";"Mann";0
+"2019/20";"Nicht zuteilbar";"Frau";0
+"2018/19";"Architektur, Bau- und Planungswesen";"Mann";360
+"2018/19";"Architektur, Bau- und Planungswesen";"Frau";111
+"2018/19";"Technik und IT";"Mann";2149
+"2018/19";"Technik und IT";"Frau";231
+"2018/19";"Chemie und Life Sciences";"Mann";724
+"2018/19";"Chemie und Life Sciences";"Frau";627
+"2018/19";"Land- und Forstwirtschaft";"Mann";0
+"2018/19";"Land- und Forstwirtschaft";"Frau";0
+"2018/19";"Wirtschaft und Dienstleistungen";"Mann";4606
+"2018/19";"Wirtschaft und Dienstleistungen";"Frau";3459
+"2018/19";"Design";"Mann";192
+"2018/19";"Design";"Frau";256
+"2018/19";"Sport";"Mann";0
+"2018/19";"Sport";"Frau";0
+"2018/19";"Musik, Theater und andere Künste";"Mann";838
+"2018/19";"Musik, Theater und andere Künste";"Frau";1052
+"2018/19";"Angewandte Linguistik";"Mann";88
+"2018/19";"Angewandte Linguistik";"Frau";415
+"2018/19";"Soziale Arbeit";"Mann";254
+"2018/19";"Soziale Arbeit";"Frau";639
+"2018/19";"Angewandte Psychologie";"Mann";255
+"2018/19";"Angewandte Psychologie";"Frau";884
+"2018/19";"Gesundheit";"Mann";224
+"2018/19";"Gesundheit";"Frau";1637
+"2018/19";"Nicht zuteilbar";"Mann";0
+"2018/19";"Nicht zuteilbar";"Frau";0
+"2017/18";"Architektur, Bau- und Planungswesen";"Mann";337
+"2017/18";"Architektur, Bau- und Planungswesen";"Frau";117
+"2017/18";"Technik und IT";"Mann";2115
+"2017/18";"Technik und IT";"Frau";206
+"2017/18";"Chemie und Life Sciences";"Mann";727
+"2017/18";"Chemie und Life Sciences";"Frau";607
+"2017/18";"Land- und Forstwirtschaft";"Mann";0
+"2017/18";"Land- und Forstwirtschaft";"Frau";0
+"2017/18";"Wirtschaft und Dienstleistungen";"Mann";4637
+"2017/18";"Wirtschaft und Dienstleistungen";"Frau";3353
+"2017/18";"Design";"Mann";215
+"2017/18";"Design";"Frau";256
+"2017/18";"Sport";"Mann";0
+"2017/18";"Sport";"Frau";0
+"2017/18";"Musik, Theater und andere Künste";"Mann";791
+"2017/18";"Musik, Theater und andere Künste";"Frau";984
+"2017/18";"Angewandte Linguistik";"Mann";87
+"2017/18";"Angewandte Linguistik";"Frau";429
+"2017/18";"Soziale Arbeit";"Mann";238
+"2017/18";"Soziale Arbeit";"Frau";632
+"2017/18";"Angewandte Psychologie";"Mann";227
+"2017/18";"Angewandte Psychologie";"Frau";818
+"2017/18";"Gesundheit";"Mann";206
+"2017/18";"Gesundheit";"Frau";1553
+"2017/18";"Nicht zuteilbar";"Mann";0
+"2017/18";"Nicht zuteilbar";"Frau";0
+"2016/17";"Architektur, Bau- und Planungswesen";"Mann";325
+"2016/17";"Architektur, Bau- und Planungswesen";"Frau";118
+"2016/17";"Technik und IT";"Mann";2063
+"2016/17";"Technik und IT";"Frau";174
+"2016/17";"Chemie und Life Sciences";"Mann";739
+"2016/17";"Chemie und Life Sciences";"Frau";573
+"2016/17";"Land- und Forstwirtschaft";"Mann";0
+"2016/17";"Land- und Forstwirtschaft";"Frau";0
+"2016/17";"Wirtschaft und Dienstleistungen";"Mann";4400
+"2016/17";"Wirtschaft und Dienstleistungen";"Frau";3147
+"2016/17";"Design";"Mann";247
+"2016/17";"Design";"Frau";286
+"2016/17";"Sport";"Mann";0
+"2016/17";"Sport";"Frau";0
+"2016/17";"Musik, Theater und andere Künste";"Mann";763
+"2016/17";"Musik, Theater und andere Künste";"Frau";951
+"2016/17";"Angewandte Linguistik";"Mann";107
+"2016/17";"Angewandte Linguistik";"Frau";410
+"2016/17";"Soziale Arbeit";"Mann";227
+"2016/17";"Soziale Arbeit";"Frau";639
+"2016/17";"Angewandte Psychologie";"Mann";231
+"2016/17";"Angewandte Psychologie";"Frau";849
+"2016/17";"Gesundheit";"Mann";187
+"2016/17";"Gesundheit";"Frau";1469
+"2016/17";"Nicht zuteilbar";"Mann";0
+"2016/17";"Nicht zuteilbar";"Frau";0
+"2015/16";"Architektur, Bau- und Planungswesen";"Mann";353
+"2015/16";"Architektur, Bau- und Planungswesen";"Frau";128
+"2015/16";"Technik und IT";"Mann";1986
+"2015/16";"Technik und IT";"Frau";168
+"2015/16";"Chemie und Life Sciences";"Mann";677
+"2015/16";"Chemie und Life Sciences";"Frau";524
+"2015/16";"Land- und Forstwirtschaft";"Mann";0
+"2015/16";"Land- und Forstwirtschaft";"Frau";0
+"2015/16";"Wirtschaft und Dienstleistungen";"Mann";4133
+"2015/16";"Wirtschaft und Dienstleistungen";"Frau";2988
+"2015/16";"Design";"Mann";252
+"2015/16";"Design";"Frau";299
+"2015/16";"Sport";"Mann";0
+"2015/16";"Sport";"Frau";0
+"2015/16";"Musik, Theater und andere Künste";"Mann";714
+"2015/16";"Musik, Theater und andere Künste";"Frau";940
+"2015/16";"Angewandte Linguistik";"Mann";118
+"2015/16";"Angewandte Linguistik";"Frau";374
+"2015/16";"Soziale Arbeit";"Mann";205
+"2015/16";"Soziale Arbeit";"Frau";619
+"2015/16";"Angewandte Psychologie";"Mann";244
+"2015/16";"Angewandte Psychologie";"Frau";844
+"2015/16";"Gesundheit";"Mann";178
+"2015/16";"Gesundheit";"Frau";1405
+"2015/16";"Nicht zuteilbar";"Mann";0
+"2015/16";"Nicht zuteilbar";"Frau";0
+"2014/15";"Architektur, Bau- und Planungswesen";"Mann";383
+"2014/15";"Architektur, Bau- und Planungswesen";"Frau";149
+"2014/15";"Technik und IT";"Mann";1996
+"2014/15";"Technik und IT";"Frau";167
+"2014/15";"Chemie und Life Sciences";"Mann";708
+"2014/15";"Chemie und Life Sciences";"Frau";505
+"2014/15";"Land- und Forstwirtschaft";"Mann";0
+"2014/15";"Land- und Forstwirtschaft";"Frau";0
+"2014/15";"Wirtschaft und Dienstleistungen";"Mann";3915
+"2014/15";"Wirtschaft und Dienstleistungen";"Frau";2864
+"2014/15";"Design";"Mann";261
+"2014/15";"Design";"Frau";302
+"2014/15";"Sport";"Mann";0
+"2014/15";"Sport";"Frau";0
+"2014/15";"Musik, Theater und andere Künste";"Mann";680
+"2014/15";"Musik, Theater und andere Künste";"Frau";929
+"2014/15";"Angewandte Linguistik";"Mann";90
+"2014/15";"Angewandte Linguistik";"Frau";353
+"2014/15";"Soziale Arbeit";"Mann";201
+"2014/15";"Soziale Arbeit";"Frau";608
+"2014/15";"Angewandte Psychologie";"Mann";232
+"2014/15";"Angewandte Psychologie";"Frau";811
+"2014/15";"Gesundheit";"Mann";147
+"2014/15";"Gesundheit";"Frau";1365
+"2014/15";"Nicht zuteilbar";"Mann";0
+"2014/15";"Nicht zuteilbar";"Frau";0
+"2013/14";"Architektur, Bau- und Planungswesen";"Mann";381
+"2013/14";"Architektur, Bau- und Planungswesen";"Frau";166
+"2013/14";"Technik und IT";"Mann";1912
+"2013/14";"Technik und IT";"Frau";163
+"2013/14";"Chemie und Life Sciences";"Mann";739
+"2013/14";"Chemie und Life Sciences";"Frau";537
+"2013/14";"Land- und Forstwirtschaft";"Mann";0
+"2013/14";"Land- und Forstwirtschaft";"Frau";0
+"2013/14";"Wirtschaft und Dienstleistungen";"Mann";3928
+"2013/14";"Wirtschaft und Dienstleistungen";"Frau";2911
+"2013/14";"Design";"Mann";259
+"2013/14";"Design";"Frau";310
+"2013/14";"Sport";"Mann";0
+"2013/14";"Sport";"Frau";0
+"2013/14";"Musik, Theater und andere Künste";"Mann";665
+"2013/14";"Musik, Theater und andere Künste";"Frau";900
+"2013/14";"Angewandte Linguistik";"Mann";91
+"2013/14";"Angewandte Linguistik";"Frau";358
+"2013/14";"Soziale Arbeit";"Mann";189
+"2013/14";"Soziale Arbeit";"Frau";599
+"2013/14";"Angewandte Psychologie";"Mann";226
+"2013/14";"Angewandte Psychologie";"Frau";704
+"2013/14";"Gesundheit";"Mann";144
+"2013/14";"Gesundheit";"Frau";1330
+"2013/14";"Nicht zuteilbar";"Mann";0
+"2013/14";"Nicht zuteilbar";"Frau";0
+"2012/13";"Architektur, Bau- und Planungswesen";"Mann";385
+"2012/13";"Architektur, Bau- und Planungswesen";"Frau";167
+"2012/13";"Technik und IT";"Mann";1863
+"2012/13";"Technik und IT";"Frau";141
+"2012/13";"Chemie und Life Sciences";"Mann";705
+"2012/13";"Chemie und Life Sciences";"Frau";538
+"2012/13";"Land- und Forstwirtschaft";"Mann";0
+"2012/13";"Land- und Forstwirtschaft";"Frau";0
+"2012/13";"Wirtschaft und Dienstleistungen";"Mann";3920
+"2012/13";"Wirtschaft und Dienstleistungen";"Frau";2811
+"2012/13";"Design";"Mann";266
+"2012/13";"Design";"Frau";313
+"2012/13";"Sport";"Mann";0
+"2012/13";"Sport";"Frau";0
+"2012/13";"Musik, Theater und andere Künste";"Mann";669
+"2012/13";"Musik, Theater und andere Künste";"Frau";958
+"2012/13";"Angewandte Linguistik";"Mann";88
+"2012/13";"Angewandte Linguistik";"Frau";335
+"2012/13";"Soziale Arbeit";"Mann";176
+"2012/13";"Soziale Arbeit";"Frau";571
+"2012/13";"Angewandte Psychologie";"Mann";223
+"2012/13";"Angewandte Psychologie";"Frau";657
+"2012/13";"Gesundheit";"Mann";169
+"2012/13";"Gesundheit";"Frau";1257
+"2012/13";"Nicht zuteilbar";"Mann";0
+"2012/13";"Nicht zuteilbar";"Frau";0
+"2011/12";"Architektur, Bau- und Planungswesen";"Mann";404
+"2011/12";"Architektur, Bau- und Planungswesen";"Frau";145
+"2011/12";"Technik und IT";"Mann";1743
+"2011/12";"Technik und IT";"Frau";114
+"2011/12";"Chemie und Life Sciences";"Mann";682
+"2011/12";"Chemie und Life Sciences";"Frau";522
+"2011/12";"Land- und Forstwirtschaft";"Mann";0
+"2011/12";"Land- und Forstwirtschaft";"Frau";0
+"2011/12";"Wirtschaft und Dienstleistungen";"Mann";3745
+"2011/12";"Wirtschaft und Dienstleistungen";"Frau";2663
+"2011/12";"Design";"Mann";324
+"2011/12";"Design";"Frau";350
+"2011/12";"Sport";"Mann";0
+"2011/12";"Sport";"Frau";0
+"2011/12";"Musik, Theater und andere Künste";"Mann";584
+"2011/12";"Musik, Theater und andere Künste";"Frau";930
+"2011/12";"Angewandte Linguistik";"Mann";99
+"2011/12";"Angewandte Linguistik";"Frau";335
+"2011/12";"Soziale Arbeit";"Mann";172
+"2011/12";"Soziale Arbeit";"Frau";515
+"2011/12";"Angewandte Psychologie";"Mann";201
+"2011/12";"Angewandte Psychologie";"Frau";540
+"2011/12";"Gesundheit";"Mann";131
+"2011/12";"Gesundheit";"Frau";1173
+"2011/12";"Nicht zuteilbar";"Mann";0
+"2011/12";"Nicht zuteilbar";"Frau";0
+"2010/11";"Architektur, Bau- und Planungswesen";"Mann";403
+"2010/11";"Architektur, Bau- und Planungswesen";"Frau";132
+"2010/11";"Technik und IT";"Mann";1723
+"2010/11";"Technik und IT";"Frau";120
+"2010/11";"Chemie und Life Sciences";"Mann";613
+"2010/11";"Chemie und Life Sciences";"Frau";503
+"2010/11";"Land- und Forstwirtschaft";"Mann";0
+"2010/11";"Land- und Forstwirtschaft";"Frau";0
+"2010/11";"Wirtschaft und Dienstleistungen";"Mann";3504
+"2010/11";"Wirtschaft und Dienstleistungen";"Frau";2443
+"2010/11";"Design";"Mann";345
+"2010/11";"Design";"Frau";364
+"2010/11";"Sport";"Mann";0
+"2010/11";"Sport";"Frau";0
+"2010/11";"Musik, Theater und andere Künste";"Mann";601
+"2010/11";"Musik, Theater und andere Künste";"Frau";963
+"2010/11";"Angewandte Linguistik";"Mann";108
+"2010/11";"Angewandte Linguistik";"Frau";401
+"2010/11";"Soziale Arbeit";"Mann";169
+"2010/11";"Soziale Arbeit";"Frau";490
+"2010/11";"Angewandte Psychologie";"Mann";198
+"2010/11";"Angewandte Psychologie";"Frau";517
+"2010/11";"Gesundheit";"Mann";120
+"2010/11";"Gesundheit";"Frau";1079
+"2010/11";"Nicht zuteilbar";"Mann";0
+"2010/11";"Nicht zuteilbar";"Frau";0
+"2009/10";"Architektur, Bau- und Planungswesen";"Mann";389
+"2009/10";"Architektur, Bau- und Planungswesen";"Frau";131
+"2009/10";"Technik und IT";"Mann";1657
+"2009/10";"Technik und IT";"Frau";121
+"2009/10";"Chemie und Life Sciences";"Mann";542
+"2009/10";"Chemie und Life Sciences";"Frau";439
+"2009/10";"Land- und Forstwirtschaft";"Mann";0
+"2009/10";"Land- und Forstwirtschaft";"Frau";0
+"2009/10";"Wirtschaft und Dienstleistungen";"Mann";3176
+"2009/10";"Wirtschaft und Dienstleistungen";"Frau";2197
+"2009/10";"Design";"Mann";328
+"2009/10";"Design";"Frau";331
+"2009/10";"Sport";"Mann";0
+"2009/10";"Sport";"Frau";0
+"2009/10";"Musik, Theater und andere Künste";"Mann";528
+"2009/10";"Musik, Theater und andere Künste";"Frau";907
+"2009/10";"Angewandte Linguistik";"Mann";89
+"2009/10";"Angewandte Linguistik";"Frau";395
+"2009/10";"Soziale Arbeit";"Mann";165
+"2009/10";"Soziale Arbeit";"Frau";460
+"2009/10";"Angewandte Psychologie";"Mann";162
+"2009/10";"Angewandte Psychologie";"Frau";427
+"2009/10";"Gesundheit";"Mann";110
+"2009/10";"Gesundheit";"Frau";962
+"2009/10";"Nicht zuteilbar";"Mann";0
+"2009/10";"Nicht zuteilbar";"Frau";0
