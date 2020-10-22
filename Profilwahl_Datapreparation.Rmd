@@ -51,8 +51,10 @@ profilwahl <- foreach(i=datapath_p) %do% read_csv(i) %>%
 profilwahl_long <- profilwahl %>%
   filter(Typ != "Diplommittelschule") %>%
   select(Jahr, "Profil" = Typ, "Frauen" = Weiblich, "Männer" = Männlich)
+# %>%
+#   tidyr::pivot_longer(cols = c("Frauen", "Männer"), names_to = "Geschlecht", values_to = "Anteil")
 
-write.csv(profilwahl_long, "Profilwahl.csv", row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(profilwahl_long, "Profilwahl_wide.csv", row.names = FALSE, fileEncoding = "UTF-8")
 ```
 
 # Berufslehre
