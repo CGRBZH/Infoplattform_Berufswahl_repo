@@ -1,243 +1,111 @@
-"Jahr","Fachbereich","Geschlecht","PHZ","Total_Fachbereich_Geschlecht","Total_Fachbereich","Total_Jahr","Total_Jahr_Geschlecht","prop_Jahr_Geschlecht","prop_Jahr_Fachbereich_Geschlecht"
-"2019/20","Vorschul- und Primarstufe","Mann",439,439,2079,3605,1140,31.62,21.12
-"2019/20","Vorschul- und Primarstufe","Frau",1640,1640,2079,3605,2465,68.38,78.88
-"2019/20","Sekundarstufe I","Mann",474,474,1018,3605,1140,31.62,46.56
-"2019/20","Sekundarstufe I","Frau",544,544,1018,3605,2465,68.38,53.44
-"2019/20","Sekundarstufe I und II zusammen","Mann",0,0,0,3605,1140,31.62,NA
-"2019/20","Sekundarstufe I und II zusammen","Frau",0,0,0,3605,2465,68.38,NA
-"2019/20","Sekundarstufe II (Gymnasiale Maturit‰tsschulen)","Mann",0,0,0,3605,1140,31.62,NA
-"2019/20","Sekundarstufe II (Gymnasiale Maturit‰tsschulen)","Frau",0,0,0,3605,2465,68.38,NA
-"2019/20","Sekundarstufe II (Berufsbildung)","Mann",187,187,370,3605,1140,31.62,50.54
-"2019/20","Sekundarstufe II (Berufsbildung)","Frau",183,183,370,3605,2465,68.38,49.46
-"2019/20","Berufsbildung allgemein","Mann",0,0,0,3605,1140,31.62,NA
-"2019/20","Berufsbildung allgemein","Frau",0,0,0,3605,2465,68.38,NA
-"2019/20","Logop‰die","Mann",0,0,0,3605,1140,31.62,NA
-"2019/20","Logop‰die","Frau",0,0,0,3605,2465,68.38,NA
-"2019/20","Psychomotoriktherapie","Mann",0,0,0,3605,1140,31.62,NA
-"2019/20","Psychomotoriktherapie","Frau",0,0,0,3605,2465,68.38,NA
-"2019/20","Heilp‰dagogik","Mann",0,0,0,3605,1140,31.62,NA
-"2019/20","Heilp‰dagogik","Frau",0,0,0,3605,2465,68.38,NA
-"2019/20","Fachdidaktik","Mann",36,36,127,3605,1140,31.62,28.35
-"2019/20","Fachdidaktik","Frau",91,91,127,3605,2465,68.38,71.65
-"2019/20","Lehrkr‰fteausbildung allgemein","Mann",4,4,11,3605,1140,31.62,36.36
-"2019/20","Lehrkr‰fteausbildung allgemein","Frau",7,7,11,3605,2465,68.38,63.64
-"2018/19","Vorschul- und Primarstufe","Mann",423,423,2063,3589,1138,31.71,20.5
-"2018/19","Vorschul- und Primarstufe","Frau",1640,1640,2063,3589,2451,68.29,79.5
-"2018/19","Sekundarstufe I","Mann",490,490,1057,3589,1138,31.71,46.36
-"2018/19","Sekundarstufe I","Frau",567,567,1057,3589,2451,68.29,53.64
-"2018/19","Sekundarstufe I und II zusammen","Mann",0,0,0,3589,1138,31.71,NA
-"2018/19","Sekundarstufe I und II zusammen","Frau",0,0,0,3589,2451,68.29,NA
-"2018/19","Sekundarstufe II (Gymnasiale Maturit‰tsschulen)","Mann",0,0,0,3589,1138,31.71,NA
-"2018/19","Sekundarstufe II (Gymnasiale Maturit‰tsschulen)","Frau",0,0,0,3589,2451,68.29,NA
-"2018/19","Sekundarstufe II (Berufsbildung)","Mann",183,183,343,3589,1138,31.71,53.35
-"2018/19","Sekundarstufe II (Berufsbildung)","Frau",160,160,343,3589,2451,68.29,46.65
-"2018/19","Berufsbildung allgemein","Mann",0,0,0,3589,1138,31.71,NA
-"2018/19","Berufsbildung allgemein","Frau",0,0,0,3589,2451,68.29,NA
-"2018/19","Logop‰die","Mann",0,0,0,3589,1138,31.71,NA
-"2018/19","Logop‰die","Frau",0,0,0,3589,2451,68.29,NA
-"2018/19","Psychomotoriktherapie","Mann",0,0,0,3589,1138,31.71,NA
-"2018/19","Psychomotoriktherapie","Frau",0,0,0,3589,2451,68.29,NA
-"2018/19","Heilp‰dagogik","Mann",0,0,0,3589,1138,31.71,NA
-"2018/19","Heilp‰dagogik","Frau",0,0,0,3589,2451,68.29,NA
-"2018/19","Fachdidaktik","Mann",37,37,112,3589,1138,31.71,33.04
-"2018/19","Fachdidaktik","Frau",75,75,112,3589,2451,68.29,66.96
-"2018/19","Lehrkr‰fteausbildung allgemein","Mann",5,5,14,3589,1138,31.71,35.71
-"2018/19","Lehrkr‰fteausbildung allgemein","Frau",9,9,14,3589,2451,68.29,64.29
-"2017/18","Vorschul- und Primarstufe","Mann",390,390,2020,3417,1050,30.73,19.31
-"2017/18","Vorschul- und Primarstufe","Frau",1630,1630,2020,3417,2367,69.27,80.69
-"2017/18","Sekundarstufe I","Mann",456,456,998,3417,1050,30.73,45.69
-"2017/18","Sekundarstufe I","Frau",542,542,998,3417,2367,69.27,54.31
-"2017/18","Sekundarstufe I und II zusammen","Mann",0,0,0,3417,1050,30.73,NA
-"2017/18","Sekundarstufe I und II zusammen","Frau",0,0,0,3417,2367,69.27,NA
-"2017/18","Sekundarstufe II (Gymnasiale Maturit‰tsschulen)","Mann",0,0,0,3417,1050,30.73,NA
-"2017/18","Sekundarstufe II (Gymnasiale Maturit‰tsschulen)","Frau",0,0,0,3417,2367,69.27,NA
-"2017/18","Sekundarstufe II (Berufsbildung)","Mann",167,167,317,3417,1050,30.73,52.68
-"2017/18","Sekundarstufe II (Berufsbildung)","Frau",150,150,317,3417,2367,69.27,47.32
-"2017/18","Berufsbildung allgemein","Mann",0,0,0,3417,1050,30.73,NA
-"2017/18","Berufsbildung allgemein","Frau",0,0,0,3417,2367,69.27,NA
-"2017/18","Logop‰die","Mann",0,0,0,3417,1050,30.73,NA
-"2017/18","Logop‰die","Frau",0,0,0,3417,2367,69.27,NA
-"2017/18","Psychomotoriktherapie","Mann",0,0,0,3417,1050,30.73,NA
-"2017/18","Psychomotoriktherapie","Frau",0,0,0,3417,2367,69.27,NA
-"2017/18","Heilp‰dagogik","Mann",0,0,0,3417,1050,30.73,NA
-"2017/18","Heilp‰dagogik","Frau",0,0,0,3417,2367,69.27,NA
-"2017/18","Fachdidaktik","Mann",26,26,67,3417,1050,30.73,38.81
-"2017/18","Fachdidaktik","Frau",41,41,67,3417,2367,69.27,61.19
-"2017/18","Lehrkr‰fteausbildung allgemein","Mann",11,11,15,3417,1050,30.73,73.33
-"2017/18","Lehrkr‰fteausbildung allgemein","Frau",4,4,15,3417,2367,69.27,26.67
-"2016/17","Vorschul- und Primarstufe","Mann",346,346,1980,3384,1005,29.7,17.47
-"2016/17","Vorschul- und Primarstufe","Frau",1634,1634,1980,3384,2379,70.3,82.53
-"2016/17","Sekundarstufe I","Mann",433,433,976,3384,1005,29.7,44.36
-"2016/17","Sekundarstufe I","Frau",543,543,976,3384,2379,70.3,55.64
-"2016/17","Sekundarstufe I und II zusammen","Mann",0,0,0,3384,1005,29.7,NA
-"2016/17","Sekundarstufe I und II zusammen","Frau",0,0,0,3384,2379,70.3,NA
-"2016/17","Sekundarstufe II (Gymnasiale Maturit‰tsschulen)","Mann",0,0,0,3384,1005,29.7,NA
-"2016/17","Sekundarstufe II (Gymnasiale Maturit‰tsschulen)","Frau",0,0,0,3384,2379,70.3,NA
-"2016/17","Sekundarstufe II (Berufsbildung)","Mann",197,197,367,3384,1005,29.7,53.68
-"2016/17","Sekundarstufe II (Berufsbildung)","Frau",170,170,367,3384,2379,70.3,46.32
-"2016/17","Berufsbildung allgemein","Mann",0,0,0,3384,1005,29.7,NA
-"2016/17","Berufsbildung allgemein","Frau",0,0,0,3384,2379,70.3,NA
-"2016/17","Logop‰die","Mann",0,0,0,3384,1005,29.7,NA
-"2016/17","Logop‰die","Frau",0,0,0,3384,2379,70.3,NA
-"2016/17","Psychomotoriktherapie","Mann",0,0,0,3384,1005,29.7,NA
-"2016/17","Psychomotoriktherapie","Frau",0,0,0,3384,2379,70.3,NA
-"2016/17","Heilp‰dagogik","Mann",0,0,0,3384,1005,29.7,NA
-"2016/17","Heilp‰dagogik","Frau",0,0,0,3384,2379,70.3,NA
-"2016/17","Fachdidaktik","Mann",24,24,50,3384,1005,29.7,48
-"2016/17","Fachdidaktik","Frau",26,26,50,3384,2379,70.3,52
-"2016/17","Lehrkr‰fteausbildung allgemein","Mann",5,5,11,3384,1005,29.7,45.45
-"2016/17","Lehrkr‰fteausbildung allgemein","Frau",6,6,11,3384,2379,70.3,54.55
-"2015/16","Vorschul- und Primarstufe","Mann",325,325,2001,3425,991,28.93,16.24
-"2015/16","Vorschul- und Primarstufe","Frau",1676,1676,2001,3425,2434,71.07,83.76
-"2015/16","Sekundarstufe I","Mann",435,435,1000,3425,991,28.93,43.5
-"2015/16","Sekundarstufe I","Frau",565,565,1000,3425,2434,71.07,56.5
-"2015/16","Sekundarstufe I und II zusammen","Mann",0,0,0,3425,991,28.93,NA
-"2015/16","Sekundarstufe I und II zusammen","Frau",0,0,0,3425,2434,71.07,NA
-"2015/16","Sekundarstufe II (Gymnasiale Maturit‰tsschulen)","Mann",0,0,0,3425,991,28.93,NA
-"2015/16","Sekundarstufe II (Gymnasiale Maturit‰tsschulen)","Frau",0,0,0,3425,2434,71.07,NA
-"2015/16","Sekundarstufe II (Berufsbildung)","Mann",199,199,355,3425,991,28.93,56.06
-"2015/16","Sekundarstufe II (Berufsbildung)","Frau",156,156,355,3425,2434,71.07,43.94
-"2015/16","Berufsbildung allgemein","Mann",0,0,0,3425,991,28.93,NA
-"2015/16","Berufsbildung allgemein","Frau",0,0,0,3425,2434,71.07,NA
-"2015/16","Logop‰die","Mann",0,0,0,3425,991,28.93,NA
-"2015/16","Logop‰die","Frau",0,0,0,3425,2434,71.07,NA
-"2015/16","Psychomotoriktherapie","Mann",0,0,0,3425,991,28.93,NA
-"2015/16","Psychomotoriktherapie","Frau",0,0,0,3425,2434,71.07,NA
-"2015/16","Heilp‰dagogik","Mann",0,0,0,3425,991,28.93,NA
-"2015/16","Heilp‰dagogik","Frau",0,0,0,3425,2434,71.07,NA
-"2015/16","Fachdidaktik","Mann",24,24,61,3425,991,28.93,39.34
-"2015/16","Fachdidaktik","Frau",37,37,61,3425,2434,71.07,60.66
-"2015/16","Lehrkr‰fteausbildung allgemein","Mann",8,8,8,3425,991,28.93,100
-"2015/16","Lehrkr‰fteausbildung allgemein","Frau",0,0,8,3425,2434,71.07,0
-"2014/15","Vorschul- und Primarstufe","Mann",295,295,1972,3341,915,27.39,14.96
-"2014/15","Vorschul- und Primarstufe","Frau",1677,1677,1972,3341,2426,72.61,85.04
-"2014/15","Sekundarstufe I","Mann",400,400,967,3341,915,27.39,41.37
-"2014/15","Sekundarstufe I","Frau",567,567,967,3341,2426,72.61,58.63
-"2014/15","Sekundarstufe I und II zusammen","Mann",0,0,0,3341,915,27.39,NA
-"2014/15","Sekundarstufe I und II zusammen","Frau",0,0,0,3341,2426,72.61,NA
-"2014/15","Sekundarstufe II (Gymnasiale Maturit‰tsschulen)","Mann",0,0,0,3341,915,27.39,NA
-"2014/15","Sekundarstufe II (Gymnasiale Maturit‰tsschulen)","Frau",0,0,0,3341,2426,72.61,NA
-"2014/15","Sekundarstufe II (Berufsbildung)","Mann",187,187,331,3341,915,27.39,56.5
-"2014/15","Sekundarstufe II (Berufsbildung)","Frau",144,144,331,3341,2426,72.61,43.5
-"2014/15","Berufsbildung allgemein","Mann",0,0,0,3341,915,27.39,NA
-"2014/15","Berufsbildung allgemein","Frau",0,0,0,3341,2426,72.61,NA
-"2014/15","Logop‰die","Mann",0,0,0,3341,915,27.39,NA
-"2014/15","Logop‰die","Frau",0,0,0,3341,2426,72.61,NA
-"2014/15","Psychomotoriktherapie","Mann",0,0,0,3341,915,27.39,NA
-"2014/15","Psychomotoriktherapie","Frau",0,0,0,3341,2426,72.61,NA
-"2014/15","Heilp‰dagogik","Mann",0,0,0,3341,915,27.39,NA
-"2014/15","Heilp‰dagogik","Frau",0,0,0,3341,2426,72.61,NA
-"2014/15","Fachdidaktik","Mann",22,22,54,3341,915,27.39,40.74
-"2014/15","Fachdidaktik","Frau",32,32,54,3341,2426,72.61,59.26
-"2014/15","Lehrkr‰fteausbildung allgemein","Mann",11,11,17,3341,915,27.39,64.71
-"2014/15","Lehrkr‰fteausbildung allgemein","Frau",6,6,17,3341,2426,72.61,35.29
-"2013/14","Vorschul- und Primarstufe","Mann",285,285,1944,3222,859,26.66,14.66
-"2013/14","Vorschul- und Primarstufe","Frau",1659,1659,1944,3222,2363,73.34,85.34
-"2013/14","Sekundarstufe I","Mann",386,386,927,3222,859,26.66,41.64
-"2013/14","Sekundarstufe I","Frau",541,541,927,3222,2363,73.34,58.36
-"2013/14","Sekundarstufe I und II zusammen","Mann",0,0,0,3222,859,26.66,NA
-"2013/14","Sekundarstufe I und II zusammen","Frau",0,0,0,3222,2363,73.34,NA
-"2013/14","Sekundarstufe II (Gymnasiale Maturit‰tsschulen)","Mann",0,0,0,3222,859,26.66,NA
-"2013/14","Sekundarstufe II (Gymnasiale Maturit‰tsschulen)","Frau",0,0,0,3222,2363,73.34,NA
-"2013/14","Sekundarstufe II (Berufsbildung)","Mann",163,163,291,3222,859,26.66,56.01
-"2013/14","Sekundarstufe II (Berufsbildung)","Frau",128,128,291,3222,2363,73.34,43.99
-"2013/14","Berufsbildung allgemein","Mann",0,0,0,3222,859,26.66,NA
-"2013/14","Berufsbildung allgemein","Frau",0,0,0,3222,2363,73.34,NA
-"2013/14","Logop‰die","Mann",0,0,0,3222,859,26.66,NA
-"2013/14","Logop‰die","Frau",0,0,0,3222,2363,73.34,NA
-"2013/14","Psychomotoriktherapie","Mann",0,0,0,3222,859,26.66,NA
-"2013/14","Psychomotoriktherapie","Frau",0,0,0,3222,2363,73.34,NA
-"2013/14","Heilp‰dagogik","Mann",0,0,0,3222,859,26.66,NA
-"2013/14","Heilp‰dagogik","Frau",0,0,0,3222,2363,73.34,NA
-"2013/14","Fachdidaktik","Mann",16,16,45,3222,859,26.66,35.56
-"2013/14","Fachdidaktik","Frau",29,29,45,3222,2363,73.34,64.44
-"2013/14","Lehrkr‰fteausbildung allgemein","Mann",9,9,15,3222,859,26.66,60
-"2013/14","Lehrkr‰fteausbildung allgemein","Frau",6,6,15,3222,2363,73.34,40
-"2012/13","Vorschul- und Primarstufe","Mann",231,231,1705,2719,664,24.42,13.55
-"2012/13","Vorschul- und Primarstufe","Frau",1474,1474,1705,2719,2055,75.58,86.45
-"2012/13","Sekundarstufe I","Mann",310,310,802,2719,664,24.42,38.65
-"2012/13","Sekundarstufe I","Frau",492,492,802,2719,2055,75.58,61.35
-"2012/13","Sekundarstufe I und II zusammen","Mann",0,0,0,2719,664,24.42,NA
-"2012/13","Sekundarstufe I und II zusammen","Frau",0,0,0,2719,2055,75.58,NA
-"2012/13","Sekundarstufe II (Gymnasiale Maturit‰tsschulen)","Mann",0,0,0,2719,664,24.42,NA
-"2012/13","Sekundarstufe II (Gymnasiale Maturit‰tsschulen)","Frau",0,0,0,2719,2055,75.58,NA
-"2012/13","Sekundarstufe II (Berufsbildung)","Mann",100,100,163,2719,664,24.42,61.35
-"2012/13","Sekundarstufe II (Berufsbildung)","Frau",63,63,163,2719,2055,75.58,38.65
-"2012/13","Berufsbildung allgemein","Mann",0,0,0,2719,664,24.42,NA
-"2012/13","Berufsbildung allgemein","Frau",0,0,0,2719,2055,75.58,NA
-"2012/13","Logop‰die","Mann",0,0,0,2719,664,24.42,NA
-"2012/13","Logop‰die","Frau",0,0,0,2719,2055,75.58,NA
-"2012/13","Psychomotoriktherapie","Mann",0,0,0,2719,664,24.42,NA
-"2012/13","Psychomotoriktherapie","Frau",0,0,0,2719,2055,75.58,NA
-"2012/13","Heilp‰dagogik","Mann",0,0,0,2719,664,24.42,NA
-"2012/13","Heilp‰dagogik","Frau",0,0,0,2719,2055,75.58,NA
-"2012/13","Fachdidaktik","Mann",9,9,23,2719,664,24.42,39.13
-"2012/13","Fachdidaktik","Frau",14,14,23,2719,2055,75.58,60.87
-"2012/13","Lehrkr‰fteausbildung allgemein","Mann",14,14,26,2719,664,24.42,53.85
-"2012/13","Lehrkr‰fteausbildung allgemein","Frau",12,12,26,2719,2055,75.58,46.15
-"2011/12","Vorschul- und Primarstufe","Mann",149,149,1237,2046,470,22.97,12.05
-"2011/12","Vorschul- und Primarstufe","Frau",1088,1088,1237,2046,1576,77.03,87.95
-"2011/12","Sekundarstufe I","Mann",245,245,681,2046,470,22.97,35.98
-"2011/12","Sekundarstufe I","Frau",436,436,681,2046,1576,77.03,64.02
-"2011/12","Sekundarstufe I und II zusammen","Mann",0,0,0,2046,470,22.97,NA
-"2011/12","Sekundarstufe I und II zusammen","Frau",0,0,0,2046,1576,77.03,NA
-"2011/12","Sekundarstufe II (Gymnasiale Maturit‰tsschulen)","Mann",0,0,0,2046,470,22.97,NA
-"2011/12","Sekundarstufe II (Gymnasiale Maturit‰tsschulen)","Frau",0,0,0,2046,1576,77.03,NA
-"2011/12","Sekundarstufe II (Berufsbildung)","Mann",44,44,65,2046,470,22.97,67.69
-"2011/12","Sekundarstufe II (Berufsbildung)","Frau",21,21,65,2046,1576,77.03,32.31
-"2011/12","Berufsbildung allgemein","Mann",0,0,0,2046,470,22.97,NA
-"2011/12","Berufsbildung allgemein","Frau",0,0,0,2046,1576,77.03,NA
-"2011/12","Logop‰die","Mann",0,0,0,2046,470,22.97,NA
-"2011/12","Logop‰die","Frau",0,0,0,2046,1576,77.03,NA
-"2011/12","Psychomotoriktherapie","Mann",0,0,0,2046,470,22.97,NA
-"2011/12","Psychomotoriktherapie","Frau",0,0,0,2046,1576,77.03,NA
-"2011/12","Heilp‰dagogik","Mann",0,0,0,2046,470,22.97,NA
-"2011/12","Heilp‰dagogik","Frau",0,0,0,2046,1576,77.03,NA
-"2011/12","Fachdidaktik","Mann",7,7,15,2046,470,22.97,46.67
-"2011/12","Fachdidaktik","Frau",8,8,15,2046,1576,77.03,53.33
-"2011/12","Lehrkr‰fteausbildung allgemein","Mann",25,25,48,2046,470,22.97,52.08
-"2011/12","Lehrkr‰fteausbildung allgemein","Frau",23,23,48,2046,1576,77.03,47.92
-"2010/11","Vorschul- und Primarstufe","Mann",135,135,1127,1931,432,22.37,11.98
-"2010/11","Vorschul- und Primarstufe","Frau",992,992,1127,1931,1499,77.63,88.02
-"2010/11","Sekundarstufe I","Mann",269,269,756,1931,432,22.37,35.58
-"2010/11","Sekundarstufe I","Frau",487,487,756,1931,1499,77.63,64.42
-"2010/11","Sekundarstufe I und II zusammen","Mann",0,0,0,1931,432,22.37,NA
-"2010/11","Sekundarstufe I und II zusammen","Frau",0,0,0,1931,1499,77.63,NA
-"2010/11","Sekundarstufe II (Gymnasiale Maturit‰tsschulen)","Mann",0,0,0,1931,432,22.37,NA
-"2010/11","Sekundarstufe II (Gymnasiale Maturit‰tsschulen)","Frau",0,0,0,1931,1499,77.63,NA
-"2010/11","Sekundarstufe II (Berufsbildung)","Mann",0,0,0,1931,432,22.37,NA
-"2010/11","Sekundarstufe II (Berufsbildung)","Frau",0,0,0,1931,1499,77.63,NA
-"2010/11","Berufsbildung allgemein","Mann",0,0,0,1931,432,22.37,NA
-"2010/11","Berufsbildung allgemein","Frau",0,0,0,1931,1499,77.63,NA
-"2010/11","Logop‰die","Mann",0,0,0,1931,432,22.37,NA
-"2010/11","Logop‰die","Frau",0,0,0,1931,1499,77.63,NA
-"2010/11","Psychomotoriktherapie","Mann",0,0,0,1931,432,22.37,NA
-"2010/11","Psychomotoriktherapie","Frau",0,0,0,1931,1499,77.63,NA
-"2010/11","Heilp‰dagogik","Mann",0,0,0,1931,432,22.37,NA
-"2010/11","Heilp‰dagogik","Frau",0,0,0,1931,1499,77.63,NA
-"2010/11","Fachdidaktik","Mann",0,0,0,1931,432,22.37,NA
-"2010/11","Fachdidaktik","Frau",0,0,0,1931,1499,77.63,NA
-"2010/11","Lehrkr‰fteausbildung allgemein","Mann",28,28,48,1931,432,22.37,58.33
-"2010/11","Lehrkr‰fteausbildung allgemein","Frau",20,20,48,1931,1499,77.63,41.67
-"2009/10","Vorschul- und Primarstufe","Mann",114,114,1038,1817,396,21.79,10.98
-"2009/10","Vorschul- und Primarstufe","Frau",924,924,1038,1817,1421,78.21,89.02
-"2009/10","Sekundarstufe I","Mann",273,273,767,1817,396,21.79,35.59
-"2009/10","Sekundarstufe I","Frau",494,494,767,1817,1421,78.21,64.41
-"2009/10","Sekundarstufe I und II zusammen","Mann",0,0,0,1817,396,21.79,NA
-"2009/10","Sekundarstufe I und II zusammen","Frau",0,0,0,1817,1421,78.21,NA
-"2009/10","Sekundarstufe II (Gymnasiale Maturit‰tsschulen)","Mann",0,0,0,1817,396,21.79,NA
-"2009/10","Sekundarstufe II (Gymnasiale Maturit‰tsschulen)","Frau",0,0,0,1817,1421,78.21,NA
-"2009/10","Sekundarstufe II (Berufsbildung)","Mann",0,0,0,1817,396,21.79,NA
-"2009/10","Sekundarstufe II (Berufsbildung)","Frau",0,0,0,1817,1421,78.21,NA
-"2009/10","Berufsbildung allgemein","Mann",0,0,0,1817,396,21.79,NA
-"2009/10","Berufsbildung allgemein","Frau",0,0,0,1817,1421,78.21,NA
-"2009/10","Logop‰die","Mann",0,0,0,1817,396,21.79,NA
-"2009/10","Logop‰die","Frau",0,0,0,1817,1421,78.21,NA
-"2009/10","Psychomotoriktherapie","Mann",0,0,0,1817,396,21.79,NA
-"2009/10","Psychomotoriktherapie","Frau",0,0,0,1817,1421,78.21,NA
-"2009/10","Heilp‰dagogik","Mann",0,0,0,1817,396,21.79,NA
-"2009/10","Heilp‰dagogik","Frau",0,0,0,1817,1421,78.21,NA
-"2009/10","Fachdidaktik","Mann",0,0,0,1817,396,21.79,NA
-"2009/10","Fachdidaktik","Frau",0,0,0,1817,1421,78.21,NA
-"2009/10","Lehrkr‰fteausbildung allgemein","Mann",9,9,12,1817,396,21.79,75
-"2009/10","Lehrkr‰fteausbildung allgemein","Frau",3,3,12,1817,1421,78.21,25
+"Jahr","Fachbereich","Mann","Frau","Total","Frau_Proz","Mann_Proz"
+"2010/11","Berufsbildung allgemein",0,0,0,0,0
+"2010/11","Fachdidaktik",0,0,0,0,0
+"2010/11","Heilp√§dagogik",0,0,0,0,0
+"2010/11","Lehrkr√§fteausbildung allgemein",28,20,48,41.7,58.3
+"2010/11","Logop√§die",0,0,0,0,0
+"2010/11","Psychomotoriktherapie",0,0,0,0,0
+"2010/11","Sekundarstufe I",269,487,756,64.4,35.6
+"2010/11","Sekundarstufe I und II zusammen",0,0,0,0,0
+"2010/11","Sekundarstufe II (Berufsbildung)",0,0,0,0,0
+"2010/11","Sekundarstufe II (Gymnasiale Maturit√§tsschulen)",0,0,0,0,0
+"2010/11","Vorschul- und Primarstufe",135,992,1127,88,12
+"2011/12","Berufsbildung allgemein",0,0,0,0,0
+"2011/12","Fachdidaktik",7,8,15,53.3,46.7
+"2011/12","Heilp√§dagogik",0,0,0,0,0
+"2011/12","Lehrkr√§fteausbildung allgemein",25,23,48,47.9,52.1
+"2011/12","Logop√§die",0,0,0,0,0
+"2011/12","Psychomotoriktherapie",0,0,0,0,0
+"2011/12","Sekundarstufe I",245,436,681,64,36
+"2011/12","Sekundarstufe I und II zusammen",0,0,0,0,0
+"2011/12","Sekundarstufe II (Berufsbildung)",44,21,65,32.3,67.7
+"2011/12","Sekundarstufe II (Gymnasiale Maturit√§tsschulen)",0,0,0,0,0
+"2011/12","Vorschul- und Primarstufe",149,1088,1237,88,12
+"2012/13","Berufsbildung allgemein",0,0,0,0,0
+"2012/13","Fachdidaktik",9,14,23,60.9,39.1
+"2012/13","Heilp√§dagogik",0,0,0,0,0
+"2012/13","Lehrkr√§fteausbildung allgemein",14,12,26,46.2,53.8
+"2012/13","Logop√§die",0,0,0,0,0
+"2012/13","Psychomotoriktherapie",0,0,0,0,0
+"2012/13","Sekundarstufe I",310,492,802,61.3,38.7
+"2012/13","Sekundarstufe I und II zusammen",0,0,0,0,0
+"2012/13","Sekundarstufe II (Berufsbildung)",100,63,163,38.7,61.3
+"2012/13","Sekundarstufe II (Gymnasiale Maturit√§tsschulen)",0,0,0,0,0
+"2012/13","Vorschul- und Primarstufe",231,1474,1705,86.5,13.5
+"2013/14","Berufsbildung allgemein",0,0,0,0,0
+"2013/14","Fachdidaktik",16,29,45,64.4,35.6
+"2013/14","Heilp√§dagogik",0,0,0,0,0
+"2013/14","Lehrkr√§fteausbildung allgemein",9,6,15,40,60
+"2013/14","Logop√§die",0,0,0,0,0
+"2013/14","Psychomotoriktherapie",0,0,0,0,0
+"2013/14","Sekundarstufe I",386,541,927,58.4,41.6
+"2013/14","Sekundarstufe I und II zusammen",0,0,0,0,0
+"2013/14","Sekundarstufe II (Berufsbildung)",163,128,291,44,56
+"2013/14","Sekundarstufe II (Gymnasiale Maturit√§tsschulen)",0,0,0,0,0
+"2013/14","Vorschul- und Primarstufe",285,1659,1944,85.3,14.7
+"2014/15","Berufsbildung allgemein",0,0,0,0,0
+"2014/15","Fachdidaktik",22,32,54,59.3,40.7
+"2014/15","Heilp√§dagogik",0,0,0,0,0
+"2014/15","Lehrkr√§fteausbildung allgemein",11,6,17,35.3,64.7
+"2014/15","Logop√§die",0,0,0,0,0
+"2014/15","Psychomotoriktherapie",0,0,0,0,0
+"2014/15","Sekundarstufe I",400,567,967,58.6,41.4
+"2014/15","Sekundarstufe I und II zusammen",0,0,0,0,0
+"2014/15","Sekundarstufe II (Berufsbildung)",187,144,331,43.5,56.5
+"2014/15","Sekundarstufe II (Gymnasiale Maturit√§tsschulen)",4,3,7,42.9,57.1
+"2014/15","Vorschul- und Primarstufe",295,1677,1972,85,15
+"2015/16","Berufsbildung allgemein",0,0,0,0,0
+"2015/16","Fachdidaktik",24,37,61,60.7,39.3
+"2015/16","Heilp√§dagogik",0,0,0,0,0
+"2015/16","Lehrkr√§fteausbildung allgemein",8,0,8,0,100
+"2015/16","Logop√§die",0,0,0,0,0
+"2015/16","Psychomotoriktherapie",0,0,0,0,0
+"2015/16","Sekundarstufe I",435,565,1000,56.5,43.5
+"2015/16","Sekundarstufe I und II zusammen",0,0,0,0,0
+"2015/16","Sekundarstufe II (Berufsbildung)",199,156,355,43.9,56.1
+"2015/16","Sekundarstufe II (Gymnasiale Maturit√§tsschulen)",12,5,17,29.4,70.6
+"2015/16","Vorschul- und Primarstufe",325,1676,2001,83.8,16.2
+"2016/17","Berufsbildung allgemein",0,0,0,0,0
+"2016/17","Fachdidaktik",24,26,50,52,48
+"2016/17","Heilp√§dagogik",0,0,0,0,0
+"2016/17","Lehrkr√§fteausbildung allgemein",5,6,11,54.5,45.5
+"2016/17","Logop√§die",0,0,0,0,0
+"2016/17","Psychomotoriktherapie",0,0,0,0,0
+"2016/17","Sekundarstufe I",433,543,976,55.6,44.4
+"2016/17","Sekundarstufe I und II zusammen",0,0,0,0,0
+"2016/17","Sekundarstufe II (Berufsbildung)",197,170,367,46.3,53.7
+"2016/17","Sekundarstufe II (Gymnasiale Maturit√§tsschulen)",12,9,21,42.9,57.1
+"2016/17","Vorschul- und Primarstufe",346,1634,1980,82.5,17.5
+"2017/18","Berufsbildung allgemein",0,0,0,0,0
+"2017/18","Fachdidaktik",26,41,67,61.2,38.8
+"2017/18","Heilp√§dagogik",0,0,0,0,0
+"2017/18","Lehrkr√§fteausbildung allgemein",11,4,15,26.7,73.3
+"2017/18","Logop√§die",0,0,0,0,0
+"2017/18","Psychomotoriktherapie",0,0,0,0,0
+"2017/18","Sekundarstufe I",456,542,998,54.3,45.7
+"2017/18","Sekundarstufe I und II zusammen",0,0,0,0,0
+"2017/18","Sekundarstufe II (Berufsbildung)",167,150,317,47.3,52.7
+"2017/18","Sekundarstufe II (Gymnasiale Maturit√§tsschulen)",10,8,18,44.4,55.6
+"2017/18","Vorschul- und Primarstufe",390,1630,2020,80.7,19.3
+"2018/19","Berufsbildung allgemein",0,0,0,0,0
+"2018/19","Fachdidaktik",37,75,112,67,33
+"2018/19","Heilp√§dagogik",0,0,0,0,0
+"2018/19","Lehrkr√§fteausbildung allgemein",5,9,14,64.3,35.7
+"2018/19","Logop√§die",0,0,0,0,0
+"2018/19","Psychomotoriktherapie",0,0,0,0,0
+"2018/19","Sekundarstufe I",490,567,1057,53.6,46.4
+"2018/19","Sekundarstufe I und II zusammen",0,0,0,0,0
+"2018/19","Sekundarstufe II (Berufsbildung)",183,160,343,46.6,53.4
+"2018/19","Sekundarstufe II (Gymnasiale Maturit√§tsschulen)",6,9,15,60,40
+"2018/19","Vorschul- und Primarstufe",423,1640,2063,79.5,20.5
+"2019/20","Berufsbildung allgemein",0,0,0,0,0
+"2019/20","Fachdidaktik",36,91,127,71.7,28.3
+"2019/20","Heilp√§dagogik",0,0,0,0,0
+"2019/20","Lehrkr√§fteausbildung allgemein",4,7,11,63.6,36.4
+"2019/20","Logop√§die",0,0,0,0,0
+"2019/20","Psychomotoriktherapie",0,0,0,0,0
+"2019/20","Sekundarstufe I",474,544,1018,53.4,46.6
+"2019/20","Sekundarstufe I und II zusammen",0,0,0,0,0
+"2019/20","Sekundarstufe II (Berufsbildung)",187,183,370,49.5,50.5
+"2019/20","Sekundarstufe II (Gymnasiale Maturit√§tsschulen)",7,10,17,58.8,41.2
+"2019/20","Vorschul- und Primarstufe",439,1640,2079,78.9,21.1
