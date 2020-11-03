@@ -26,80 +26,30 @@ Daten via BFS
 
 ```{r}
 
-hochschulen <- read_delim("L:/STAT/08_DS/01_Projekte/Fachstelle für Gleichstellung/2020/Infoplattform_Berufswahl/Daten/Studienwahl/BFS_Studierende_Hochschulen.csv", 
+hochschulen <- read_delim("./Daten/Studienwahl/BFS_Studierende_Hochschulen.csv", 
     ";", trim_ws = TRUE, skip = 1)
+
 
 # Transform list to data frame
 hochschulen_df <- data.frame(matrix(unlist(hochschulen), nrow=nrow(hochschulen), byrow=F),stringsAsFactors=FALSE) %>%
   setNames(., names(hochschulen)) %>%
-  mutate(UZH = as.numeric(UZH),
-         ETHZ = as.numeric(ETHZ))
+  mutate(Mann = as.numeric(Mann),
+         Frau = as.numeric(Frau)) %>% 
+  select(-Hochschule) %>% 
+  group_by(Jahr, Fachbereich) %>% 
+  summarise(Mann = sum(Mann),
+            Frau = sum(Frau),
+            Total = Mann + Frau,
+            Frau_Proz = round((Frau / Total)*100, 1),
+            Mann_Proz = round((Mann / Total)*100, 1),
+            Kategorie = "HS")
 
 # Cleaning Fachbereich labels
 hochschulen_df$Fachbereich <- stringr::str_remove(hochschulen_df$Fachbereich, " �bergreifend/�brige")
-hochschulen_df$Fachbereich <- gsub("\\d*\\.\\d*", "", hochschulen_df$Fachbereich)
-hochschulen_df$Fachbereich <- gsub("\\d*", "", hochschulen_df$Fachbereich)
-hochschulen_df$Fachbereich <- str_replace(hochschulen_df$Fachbereich, "�", "ä")
-
-```
-
-### Calculations per year
-
-```{r}
-
-# Calculate total by Fachbereich and Geschlecht
-hochschulen_calc <- hochschulen_df %>%
-  mutate(Total_Fachbereich_Geschlecht = rowSums(.[4:5]))
-
-# Calculate total by Jahr and Fachbereich
-g <- list(hochschulen_calc$Jahr, hochschulen_calc$Fachbereich)
-l <- split(hochschulen_calc, g)
-l <- lapply(l, transform, Total_Fachbereich = sum(Total_Fachbereich_Geschlecht))
-hochschulen_calc <- unsplit(l, g)
-
-# Calculate total by Jahr
-gg <- hochschulen_calc$Jahr
-ll <- split(hochschulen_calc, gg)
-ll <- lapply(ll, transform, Total_Jahr = sum(Total_Fachbereich_Geschlecht))
-hochschulen_calc <- unsplit(ll, gg)
-
-# Calculate total by Jahr and Geschlecht
-ggg <- list(hochschulen_calc$Jahr, hochschulen_calc$Geschlecht)
-lll <- split(hochschulen_calc, ggg)
-lll <- lapply(lll, transform, Total_Jahr_Geschlecht = sum(Total_Fachbereich_Geschlecht))
-hochschulen_calc <- unsplit(lll, ggg)
-
-# dplyr equivalent
-hs3 <- hochschulen_calc %>% 
-  group_by(Jahr, Geschlecht) %>%
-    mutate(total_by_sex = sum(Total_Fachbereich_Geschlecht))
-
-# Calculate percentage by sex and year
-hochschulen_calc <- hochschulen_calc %>%
-  mutate(prop_Jahr_Geschlecht = round(Total_Jahr_Geschlecht / Total_Jahr * 100, 2),
-         prop_Jahr_Fachbereich_Geschlecht = round(Total_Fachbereich_Geschlecht / Total_Fachbereich * 100, 2))
-hochschulen_calc
-
-```
-
-### Visualizing the results
-
-```{r}
-
-plot_hs <- ggplot(hochschulen_calc, 
-                           aes(x = Fachbereich, y = prop_Jahr_Fachbereich_Geschlecht, fill = Geschlecht)) + 
-  geom_bar(position = "stack", stat = "identity") +
-  facet_wrap(~ Jahr, ncol = 2)
-
-plot_hs
-
-```
-
-### Export Masterfile Studienwahl_HS
-
-```{r}
-
-write.csv(hochschulen_calc, "Master_Studienwahl_HS.csv", row.names = FALSE)
+hochschulen_df$Fachbereich <- gsub("\\d*\\.\\d*", "", hochschulen_df$Fachbereich) # Number format 1.1 
+hochschulen_df$Fachbereich <- gsub("\\d*", "", hochschulen_df$Fachbereich) # Single digit numbers
+hochschulen_df$Fachbereich <- str_replace(hochschulen_df$Fachbereich, "�", "ä") # Umlaute
+hochschulen_df$Fachbereich <- trimws(hochschulen_df$Fachbereich, "l") # Leading white space
 
 ```
 
@@ -109,79 +59,28 @@ write.csv(hochschulen_calc, "Master_Studienwahl_HS.csv", row.names = FALSE)
 
 ```{r}
 
-fachhochschulen <- read_delim("L:/STAT/08_DS/01_Projekte/Fachstelle für Gleichstellung/2020/Infoplattform_Berufswahl_repo/Daten/Studienwahl/BFS_Studierende_Fachhochschulen.csv", 
+fachhochschulen <- read_delim("./Daten/Studienwahl/BFS_Studierende_Fachhochschulen.csv", 
     ";", escape_double = FALSE, trim_ws = TRUE, skip = 1)
 View(fachhochschulen)
 
 # Transform list to data frame
 fachhochschulen_df <- data.frame(matrix(unlist(fachhochschulen), nrow=nrow(fachhochschulen), byrow=F),stringsAsFactors=FALSE) %>%
   setNames(., names(fachhochschulen)) %>%
-  mutate(ZFH = as.numeric(ZFH))
+  mutate(Mann = as.numeric(Mann),
+         Frau = as.numeric(Frau)) %>% 
+  group_by(Jahr, Fachbereich) %>% 
+  summarise(Mann = sum(Mann),
+            Frau = sum(Frau),
+            Total = Mann + Frau,
+            Frau_Proz = round((Frau / Total)*100, 1),
+            Mann_Proz = round((Mann / Total)*100, 1),
+            Kategorie = "FH")
+
+# Transforming NaN to zero
+fachhochschulen_df[is.na(fachhochschulen_df)] <- 0
 
 # Cleaning Fachbereich labels
 fachhochschulen_df$Fachbereich <- str_replace(fachhochschulen_df$Fachbereich, "�", "ü")
-```
-
-### Calculations per year
-
-```{r}
-
-# Calculate total by Fachbereich and Geschlecht
-fachhochschulen_calc <- fachhochschulen_df %>%
-  mutate(Total_Fachbereich_Geschlecht = ZFH)
-
-# Calculate total by Jahr and Fachbereich
-g <- list(fachhochschulen_calc$Jahr, fachhochschulen_calc$Fachbereich)
-l <- split(fachhochschulen_calc, g)
-l <- lapply(l, transform, Total_Fachbereich = sum(Total_Fachbereich_Geschlecht))
-fachhochschulen_calc <- unsplit(l, g)
-
-# Calculate total by Jahr
-gg <- fachhochschulen_calc$Jahr
-ll <- split(fachhochschulen_calc, gg)
-ll <- lapply(ll, transform, Total_Jahr = sum(Total_Fachbereich_Geschlecht))
-fachhochschulen_calc <- unsplit(ll, gg)
-
-# Calculate total by Jahr and Geschlecht
-ggg <- list(fachhochschulen_calc$Jahr, fachhochschulen_calc$Geschlecht)
-lll <- split(fachhochschulen_calc, ggg)
-lll <- lapply(lll, transform, Total_Jahr_Geschlecht = sum(Total_Fachbereich_Geschlecht))
-fachhochschulen_calc <- unsplit(lll, ggg)
-
-# dplyr equivalent
-hs3 <- fachhochschulen_calc %>% 
-  group_by(Jahr, Geschlecht) %>%
-    mutate(total_by_sex = sum(Total_Fachbereich_Geschlecht))
-
-# Calculate percentage by sex and year
-fachhochschulen_calc <- fachhochschulen_calc %>%
-  mutate(prop_Jahr_Geschlecht = round(Total_Jahr_Geschlecht / Total_Jahr * 100, 2),
-         prop_Jahr_Fachbereich_Geschlecht = round(Total_Fachbereich_Geschlecht / Total_Fachbereich * 100, 2))
-fachhochschulen_calc
-
-```
-
-### Visualizing the results
-
-```{r}
-
-plot_fh <- ggplot(fachhochschulen_calc, 
-                           aes(x = Fachbereich, y = prop_Jahr_Fachbereich_Geschlecht, fill = Geschlecht)) + 
-  geom_bar(position = "stack", stat = "identity") +
-  facet_wrap(~ Jahr, ncol = 2) 
-
-# Info: No enrollments for Fachbereich Sport, Land- und Forstwirtschaft and Nicht zuteilbar --> missing values
-
-plot_fh
-
-```
-
-### Export Masterfile Studienwahl_FH
-
-```{r}
-
-write.csv(fachhochschulen_calc, "Master_Studienwahl_FH.csv", row.names = FALSE)
-
 ```
 
 # Studienwahl PH
@@ -195,72 +94,42 @@ View(ph)
 
 # Transform list to data frame
 ph_df <- data.frame(matrix(unlist(ph), nrow=nrow(ph), byrow=F),stringsAsFactors=FALSE) %>%
-  rename("Jahr" = X1, "Fachbereich" = X2, "Geschlecht" = X3, "PHZ" = X4) %>%
-  mutate(PHZ = as.numeric(PHZ))
+  setNames(., names(ph)) %>%
+  mutate(Mann = as.numeric(Mann),
+         Frau = as.numeric(Frau)) %>% 
+  select(-Hochschule) %>% 
+  group_by(Jahr, Fachrichtung) %>% 
+  summarise(Mann = sum(Mann),
+            Frau = sum(Frau),
+            Total = Mann + Frau,
+            Frau_Proz = round((Frau / Total)*100, 1),
+            Mann_Proz = round((Mann / Total)*100, 1),
+            Kategorie = "PH") %>% 
+  rename(Fachbereich = Fachrichtung)
+
+# Transforming NaN to zero
+ph_df[is.na(ph_df)] <- 0
 
 # Cleaning Fachbereich labels
 ph_df$Fachbereich <- str_replace(ph_df$Fachbereich, "�", "ä")
 
 ```
 
-### Calculations per year
+## Binding all categories to one master file
 
 ```{r}
 
-# Calculate total by Fachbereich and Geschlecht
-ph_calc <- ph_df %>%
-  mutate(Total_Fachbereich_Geschlecht = PHZ)
+studienwahl <- hochschulen_df %>% 
+  bind_rows(., fachhochschulen_df, ph_df) 
 
-# Calculate total by Jahr and Fachbereich
-g <- list(ph_calc$Jahr, ph_calc$Fachbereich)
-l <- split(ph_calc, g)
-l <- lapply(l, transform, Total_Fachbereich = sum(Total_Fachbereich_Geschlecht))
-ph_calc <- unsplit(l, g)
-
-# Calculate total by Jahr
-gg <- ph_calc$Jahr
-ll <- split(ph_calc, gg)
-ll <- lapply(ll, transform, Total_Jahr = sum(Total_Fachbereich_Geschlecht))
-ph_calc <- unsplit(ll, gg)
-
-# Calculate total by Jahr and Geschlecht
-ggg <- list(ph_calc$Jahr, ph_calc$Geschlecht)
-lll <- split(ph_calc, ggg)
-lll <- lapply(lll, transform, Total_Jahr_Geschlecht = sum(Total_Fachbereich_Geschlecht))
-ph_calc <- unsplit(lll, ggg)
-
-# dplyr equivalent
-hs3 <- ph_calc %>% 
-  group_by(Jahr, Geschlecht) %>%
-    mutate(total_by_sex = sum(Total_Fachbereich_Geschlecht))
-
-# Calculate percentage by sex and year
-ph_calc <- ph_calc %>%
-  mutate(prop_Jahr_Geschlecht = round(Total_Jahr_Geschlecht / Total_Jahr * 100, 2),
-         prop_Jahr_Fachbereich_Geschlecht = round(Total_Fachbereich_Geschlecht / Total_Fachbereich * 100, 2))
-ph_calc
+studienwahl$Jahr <- gsub("\\/\\d*", "", studienwahl$Jahr)
 
 ```
 
-### Visualizing the results
+### Export Master File Studienwahl
 
 ```{r}
 
-plot_ph <- ggplot(ph_calc, 
-                           aes(x = Fachbereich, y = prop_Jahr_Fachbereich_Geschlecht, fill = Geschlecht)) + 
-  geom_bar(position = "stack", stat = "identity") +
-  facet_wrap(~ Jahr, ncol = 2) 
-
-# Info: Enrollments for only 5 Fachbereiche --> missing values
-
-plot_ph
-
-```
-
-### Export Masterfile Studienwahl_FH
-
-```{r}
-
-write.csv(ph_calc, "Master_Studienwahl_PH.csv", row.names = FALSE)
+write.table(studienwahl, "Master_Studienwahl.csv", sep=",", fileEncoding="UTF-8", row.names = F)
 
 ```
