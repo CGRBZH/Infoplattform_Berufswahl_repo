@@ -2,13 +2,10 @@ data_URL = "https://raw.githubusercontent.com/CGRBZH/Infoplattform_Berufswahl_re
 
 d3.csv(data_URL).then((data) => {
   let accessor = {
-    studyField: (d) => d.Profil,
+    schoolProfile: (d) => d.Profil,
     year: (d) => +d.Jahr,
-    //maleCount: (d) => +d.Männer,
-    //femaleCount: (d) => +d.Frauen,
     malePercentage: (d) => +d.Männer,
-    femalePercentage: (d) => +d.Frauen,
-    //totalCount: (d) => +d.Total,
+    femalePercentage: (d) => +d.Frauen
   };
 
   // Set up controls
@@ -60,40 +57,6 @@ d3.csv(data_URL).then((data) => {
   );
 
   dispatch.on("selectedchange", stackedBarChart.onSelectedChange);
-
-  /*
-  function setupSchoolTypeControl(
-    container,
-    options,
-    initialSelection,
-    dispatch
-  ) {
-    let formCheck = container
-      .selectAll("div")
-      .data(options)
-      .join("div")
-      .attr("class", "form-check form-check-inline");
-    formCheck
-      .append("input")
-      .attr("class", "form-check-input")
-      .attr("type", "radio")
-      .attr("name", "school-type-radios")
-      .attr("id", (d, i) => `school-type-radio-${i + 1}`)
-      .attr("value", (d) => d)
-      .attr("checked", (d) => (d === initialSelection ? "checked" : null))
-      .on("change", function () {
-        dispatch.call("selectedchange", this, {
-          key: "schoolType",
-          value: this.value,
-        });
-      });
-    formCheck
-      .append("label")
-      .attr("class", "form-check-label")
-      .attr("for", (d, i) => `school-type-radio-${i + 1}`)
-      .text((d) => d);
-  }
-  */
 
   function setupSortingControl(select, options, initialSelection, dispatch) {
     select
@@ -235,7 +198,7 @@ d3.csv(data_URL).then((data) => {
       .keys(["femalePercentage", "malePercentage"])
       .value((d, key) => accessor[key](d));
 
-    //const formatPercentage = d3.format(".0%");
+    const formatPercentage = d3.format(".0%");
 
     let svg = container.append("svg");
     let g = svg
@@ -263,7 +226,7 @@ d3.csv(data_URL).then((data) => {
       displayData = filteredData.sort((a, b) => {
         switch (selected.sorting) {
           case "Alphabetisch":
-            return d3.ascending(accessor.studyField(a), accessor.studyField(b));
+            return d3.ascending(accessor.schoolProfile(a), accessor.schoolProfile(b));
           case "Anteil Männer":
             return d3.descending(
               accessor.malePercentage(a),
@@ -281,7 +244,7 @@ d3.csv(data_URL).then((data) => {
 
     function update() {
       height = rowHeight * displayData.length;
-      y.domain(displayData.map(accessor.studyField)).range([0, height]);
+      y.domain(displayData.map(accessor.schoolProfile)).range([0, height]);
       svg.attr("height", height + margin.top + margin.bottom);
       gxTop
         .call(
@@ -302,7 +265,7 @@ d3.csv(data_URL).then((data) => {
         .selectAll(".row-group")
         .data(
           displayData,
-          (d) => accessor.studyField(d) //`${accessor.schoolType(d)}-${accessor.studyField(d)}}`
+          (d) => accessor.schoolProfile(d)
         )
         .join((enter) =>
           enter
@@ -310,28 +273,28 @@ d3.csv(data_URL).then((data) => {
             .attr("class", "row-group")
             .attr(
               "transform",
-              (d) => `translate(0,${y(accessor.studyField(d))})`
+              (d) => `translate(0,${y(accessor.schoolProfile(d))})`
             )
             .call((g) =>
               g
                 .append("text")
                 .attr("class", "row-label")
                 .attr("y", -4)
-                .text(accessor.studyField)
+                .text(accessor.schoolProfile)
             )
             .call((g) => g.append("g").attr("class", "bars"))
             .on("mouseenter", function (event, d) {
               let html = `
-                <div>${accessor.studyField(d)}</div>
+                <div>${accessor.schoolProfile(d)}</div>
                 <table>
                   <tbody>
                     <tr>
                       <td>Männer: </td>
-                      <td>${accessor.malePercentage(d) + `%` }</td>
+                      <td>${formatPercentage(accessor.malePercentage(d))}</td>
                     </tr>
                     <tr>
                       <td>Frauen: </td>
-                      <td>${accessor.femalePercentage(d) + `%`}</td>
+                      <td>${formatPercentage(accessor.femalePercentage(d))}</td>
                     </tr>
                   </tbody>
                 </table>
@@ -364,7 +327,7 @@ d3.csv(data_URL).then((data) => {
       gBar
         .transition()
         .duration(500)
-        .attr("transform", (d) => `translate(0,${y(accessor.studyField(d))})`)
+        .attr("transform", (d) => `translate(0,${y(accessor.schoolProfile(d))})`)
         .select(".bars")
         .selectAll(".bar")
         .attr("x", (d) => x(d[0][0]))
