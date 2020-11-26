@@ -1,5 +1,12 @@
 body {
   font-family: "Helvetica", sans-serif;
+  line-height: 1.5em;
+}
+
+h1 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: inherit;
 }
 
 svg text {

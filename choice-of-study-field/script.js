@@ -374,7 +374,7 @@ d3.csv(data_URL).then((data) => {
             .attr("y", 0)
             .attr("width", (d) => x(d[0][1]) - x(d[0][0]))
             .attr("height", barHeight)
-            .attr("fill", (d) => color(["Männer", "Frauen"]))
+            .attr("fill", (d) => color(["Männer", "Frauen"][d.index]))
         );
 
       gBar
