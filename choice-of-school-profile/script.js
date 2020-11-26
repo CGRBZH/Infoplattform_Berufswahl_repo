@@ -1,19 +1,17 @@
-data_URL = "https://raw.githubusercontent.com/CGRBZH/Infoplattform_Berufswahl_repo/main/Master_Studienwahl.csv";
+data_URL = "https://raw.githubusercontent.com/CGRBZH/Infoplattform_Berufswahl_repo/main/Profilwahl_wide.csv";
 
 d3.csv(data_URL).then((data) => {
   let accessor = {
-    schoolType: (d) => d.Kategorie,
-    studyField: (d) => d.Fachbereich,
+    studyField: (d) => d.Profil,
     year: (d) => +d.Jahr,
-    maleCount: (d) => +d.Mann,
-    femaleCount: (d) => +d.Frau,
-    malePercentage: (d) => +d.Mann_Proz,
-    femalePercentage: (d) => +d.Frau_Proz,
-    totalCount: (d) => +d.Total,
+    //maleCount: (d) => +d.Männer,
+    //femaleCount: (d) => +d.Frauen,
+    malePercentage: (d) => +d.Männer,
+    femalePercentage: (d) => +d.Frauen,
+    //totalCount: (d) => +d.Total,
   };
 
   // Set up controls
-  let schoolTypeOptions = Array.from(new Set(data.map(accessor.schoolType)));
   let sortingOptions = [
     "Alphabetisch",
     "Anteil Männer",
@@ -22,19 +20,11 @@ d3.csv(data_URL).then((data) => {
   let yearOptions = Array.from(new Set(data.map(accessor.year)));
 
   let selected = {
-    schoolType: schoolTypeOptions[0],
     sorting: sortingOptions[0],
     year: yearOptions[yearOptions.length - 1],
   };
 
   let dispatch = d3.dispatch("selectedchange");
-
-  setupSchoolTypeControl(
-    d3.select("#school-type-control"),
-    schoolTypeOptions,
-    selected.schoolType,
-    dispatch
-  );
 
   setupSortingControl(
     d3.select("#sorting-select"),
@@ -71,6 +61,7 @@ d3.csv(data_URL).then((data) => {
 
   dispatch.on("selectedchange", stackedBarChart.onSelectedChange);
 
+  /*
   function setupSchoolTypeControl(
     container,
     options,
@@ -102,6 +93,7 @@ d3.csv(data_URL).then((data) => {
       .attr("for", (d, i) => `school-type-radio-${i + 1}`)
       .text((d) => d);
   }
+  */
 
   function setupSortingControl(select, options, initialSelection, dispatch) {
     select
@@ -240,10 +232,10 @@ d3.csv(data_URL).then((data) => {
 
     let stack = d3
       .stack()
-      .keys(["malePercentage", "femalePercentage"])
+      .keys(["femalePercentage", "malePercentage"])
       .value((d, key) => accessor[key](d));
 
-    const formatPercentage = d3.format(".0%");
+    //const formatPercentage = d3.format(".0%");
 
     let svg = container.append("svg");
     let g = svg
@@ -266,9 +258,7 @@ d3.csv(data_URL).then((data) => {
 
     function wrangleData() {
       filteredData = data.filter(
-        (d) =>
-          accessor.schoolType(d) === selected.schoolType &&
-          accessor.year(d) === selected.year
+        (d) => accessor.year(d) === selected.year
       );
       displayData = filteredData.sort((a, b) => {
         switch (selected.sorting) {
@@ -312,7 +302,7 @@ d3.csv(data_URL).then((data) => {
         .selectAll(".row-group")
         .data(
           displayData,
-          (d) => `${accessor.schoolType(d)}-${accessor.studyField(d)}}`
+          (d) => accessor.studyField(d) //`${accessor.schoolType(d)}-${accessor.studyField(d)}}`
         )
         .join((enter) =>
           enter
@@ -337,17 +327,11 @@ d3.csv(data_URL).then((data) => {
                   <tbody>
                     <tr>
                       <td>Männer: </td>
-                      <td>${formatPercentage(accessor.malePercentage(d))}</td>
-                      <td>${accessor.maleCount(d).toLocaleString("de-CH", { thousands: "'" })}/${
-                accessor.totalCount(d).toLocaleString("de-CH", { thousands: "'" })
-              }</td>
+                      <td>${accessor.malePercentage(d) + `%` }</td>
                     </tr>
                     <tr>
                       <td>Frauen: </td>
-                      <td>${formatPercentage(accessor.femalePercentage(d))}</td>
-                      <td>${accessor.femaleCount(d).toLocaleString("de-CH", { thousands: "'" })}/${
-                      	accessor.totalCount(d).toLocaleString("de-CH", { thousands: "'" })
-              }</td>
+                      <td>${accessor.femalePercentage(d) + `%`}</td>
                     </tr>
                   </tbody>
                 </table>
@@ -374,7 +358,7 @@ d3.csv(data_URL).then((data) => {
             .attr("y", 0)
             .attr("width", (d) => x(d[0][1]) - x(d[0][0]))
             .attr("height", barHeight)
-            .attr("fill", (d) => color(["Männer", "Frauen"]))
+            .attr("fill", (d) => color(["Männer", "Frauen"][d.index]))
         );
 
       gBar

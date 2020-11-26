@@ -50,6 +50,8 @@ profilwahl <- foreach(i=datapath_p) %do% read_csv(i) %>%
 
 profilwahl_long <- profilwahl %>%
   filter(Typ != "Diplommittelschule") %>%
+  mutate(Weiblich = Weiblich/100,
+         `Männlich` = `Männlich`/100) %>% 
   select(Jahr, "Profil" = Typ, "Frauen" = Weiblich, "Männer" = Männlich)
 # %>%
 #   tidyr::pivot_longer(cols = c("Frauen", "Männer"), names_to = "Geschlecht", values_to = "Anteil")
